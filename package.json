@@ -1,0 +1,20 @@
+{
+  "name": "xliff-to-excel",
+  "version": "1.0.0",
+  "description": "Export xliff to excell and back",
+  "main": "cli.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "xliff-to-excel": "cli.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "newline": "0.0.3",
+    "xlsx": "^0.16.6",
+    "xml-js": "^1.6.11",
+    "yargs": "^15.4.1"
+  }
+}
