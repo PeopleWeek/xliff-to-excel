@@ -20,13 +20,14 @@ module.exports = ({ dir, input}) => {
     const data = excelImporter.import(input, domains, locales);
     locales.forEach(locale => {
         data[locale].forEach(unitData => {
-            const {domain, resname, target, state} = unitData;
+            const {domain, resname, source, target, state} = unitData;
             const unit = catalogue.getUnitByResname(domain, locale, resname);
             if(!unit){
                 return;
             }
 
             unit.setState(state);
+            unit.setSource(source);
             unit.setTarget(target);
             catalogue.setUnit(domain, locale, unit);
         });
