@@ -4,7 +4,7 @@ const importCommand = require("./commands/import-command");
 
 const argv = require("yargs")
     .command(
-        "export [dir] [ouput]",
+        "export [dir] [output]",
         "export to an excel file",
         (yargs) => {
             yargs
@@ -17,7 +17,13 @@ const argv = require("yargs")
                     describe: "the output .xlsx filepath",
                     type: "string",
                     default: "translations.xlsx",
-                });
+                })
+                .option(
+                    "states", {
+                        alias: 's',
+                        type: 'array',
+                        describe: 'filter by state attribute',
+                    });
         },
         exportCommand
     )

@@ -3,7 +3,7 @@ const helpers = require("../lib/helpers");
 const XliffImporter = require("../lib/xliff/Importer");
 const ExcelExporter = require("../lib/excel/Exporter");
 
-module.exports = ({ dir, output }) => {
+module.exports = ({ dir, output, states}) => {
 
     if(!helpers.isDirectory(dir)){
         console.error('Invalid directory "' + dir +'"');
@@ -17,5 +17,5 @@ module.exports = ({ dir, output }) => {
     const catalogue = importer.import(dir, domains, locales);
 
     const exporter = new ExcelExporter();
-    exporter.export(domains, locales, catalogue, output);
+    exporter.export(domains, locales, catalogue, states, output);
 };

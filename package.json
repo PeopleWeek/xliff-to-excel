@@ -1,6 +1,6 @@
 {
   "name": "xliff-to-excel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Export xliff to excell and back",
   "main": "cli.js",
   "scripts": {
