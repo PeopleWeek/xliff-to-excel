@@ -11,7 +11,7 @@ const argv = require("yargs")
                 .positional("dir", {
                     describe: "the translations directory",
                     type: "string",
-                    default: "app/Resources/translations",
+                    default: "translations",
                 })
                 .positional("output", {
                     describe: "the output .xlsx filepath",
@@ -35,7 +35,7 @@ const argv = require("yargs")
                 .positional("dir", {
                     describe: "the translations directory",
                     type: "string",
-                    default: "app/Resources/translations",
+                    default: "translations",
                 })
                 .positional("input", {
                     describe: "the input .xlsx filepath",
